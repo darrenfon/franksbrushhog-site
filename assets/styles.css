@@ -71,7 +71,7 @@ svg{width:1em;height:1em;fill:currentColor;flex:none}
   .hero-in{padding:80px 0 100px;width:min(1180px,100% - 40px)}
   .hero-copy{max-width:min(520px,38vw)}
   .hero h1{font-size:clamp(3rem,4.7vw,5.2rem)}
-  .hero-img{object-position:28% 50%}
+  .hero-img{object-position:42% 55%}
   .hero-tags{gap:8px 18px;font-size:.92rem}
 }
 /* sections */
@@ -94,6 +94,11 @@ section{position:relative}
 .card li{position:relative;padding-left:24px;margin:5px 0;font-weight:500}
 .card li::before{content:"";position:absolute;left:2px;top:.55em;width:10px;height:6px;border-left:3px solid var(--or);border-bottom:3px solid var(--or);transform:rotate(-45deg)}
 
+.band{position:relative;height:clamp(220px,34vw,460px);overflow:hidden;background:var(--g8);border-bottom:6px solid var(--or)}
+.band img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.band::before,.band::after{content:"";position:absolute;left:0;right:0;height:18%;z-index:1;pointer-events:none}
+.band::before{top:0;background:linear-gradient(180deg,rgba(244,239,230,.55),transparent)}
+.band::after{bottom:0;background:linear-gradient(0deg,rgba(15,42,29,.6),transparent)}
 .split{display:grid;grid-template-columns:1fr;background:var(--g8);color:#fff}
 .split-img{min-height:300px;position:relative}
 .split-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
