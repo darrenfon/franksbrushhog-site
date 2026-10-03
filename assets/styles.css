@@ -63,15 +63,18 @@ svg{width:1em;height:1em;fill:currentColor;flex:none}
 .hero-tags li{display:flex;align-items:center;gap:10px}
 .hero-tags li::before{content:"";width:14px;height:3px;background:var(--or)}
 .hazard{position:absolute;left:0;right:0;bottom:0;height:14px;background:repeating-linear-gradient(-45deg,var(--or) 0 18px,var(--char) 18px 36px)}
-@media (min-width:880px){
+@media (min-width:880px) and (max-width:1199px){
+  .hero-img{max-height:560px;object-position:50% 50%}
+}
+@media (min-width:1200px){
   .hero{min-height:min(84vh,700px);display:flex;align-items:center}
   .hero-pic{position:absolute;top:0;right:0;bottom:14px;width:60%}
   .hero-img{height:100%;aspect-ratio:auto;clip-path:polygon(22% 0,100% 0,100% 100%,6% 100%)}
   .hero-pic::after{inset:0;height:auto;bottom:0;clip-path:polygon(16% 0,19.5% 0,3.5% 100%,0 100%);opacity:1}
   .hero-in{padding:80px 0 100px;width:min(1180px,100% - 40px)}
-  .hero-copy{max-width:min(520px,38vw)}
+  .hero-copy{max-width:min(520px,38vw,calc(43vw - (100vw - min(1180px,100vw - 40px))/2 - 20px))}
   .hero h1{font-size:clamp(3rem,4.7vw,5.2rem)}
-  .hero-img{object-position:42% 55%}
+  .hero-img{object-position:30% 50%}
   .hero-tags{gap:8px 18px;font-size:.92rem}
 }
 /* sections */
@@ -124,6 +127,15 @@ section{position:relative}
 .radar svg{width:100%;height:auto}
 .rlabel{font-family:var(--hd);font-weight:800;font-size:26px;letter-spacing:4px;fill:#fff}
 .rsub{font-family:var(--hd);font-weight:600;font-size:15px;letter-spacing:3px;fill:#ffd2ad}
+.map .mcounty{stroke:#f4efe6;stroke-opacity:.2;stroke-width:.9;stroke-dasharray:4 3}
+.map .mstate{stroke:#f4efe6;stroke-opacity:.28;stroke-width:1.5}
+.map .mroad{stroke:#cfe3c4;stroke-opacity:.26;stroke-width:1.5}
+.map .mroad.mi{stroke-opacity:.3;stroke-width:1.3}
+.map .mtown{fill:#f4efe6;fill-opacity:.55;stroke:none}
+.map .mlab{font-family:var(--hd);font-weight:600;font-size:10.5px;letter-spacing:1.2px;fill:#f4efe6;fill-opacity:.55;stroke:none}
+.map .mshield{fill:#ffd2ad;fill-opacity:.6;font-weight:800}
+.map .mstl{letter-spacing:3px;fill-opacity:.45}
+.map .mco{letter-spacing:2px;fill-opacity:.38}
 .sweep{transform-origin:200px 200px;animation:spin 6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
